@@ -1,0 +1,11 @@
+function [policy W] = ni_best_mandate(par);
+a = par(1);
+b = par(2);
+c1 = par(3);
+c2 = par(4);
+t = par(7);
+min_step    = c2-(c1+t);
+ac          = exp(a-b*c1-1)/b;
+maxQ2       = 0.5*(sqrt(min_step^2+4*ac) - min_step);
+[policy W] = fminbnd(@(Qm) ni_mandate_welfare(Qm,par),0,maxQ2);
+W = -W;
