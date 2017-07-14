@@ -15,7 +15,7 @@ These simulations are performed by the program Parameter_Loop, which generates a
 table of simulation results. Each row of the table is a different parameter and
 policy combination. The choices of parameter values are described in the papers.
 Note that this code considers 3 policy instruments: carbon tax, mandate, and R&D
-subsidy.
+subsidy. The code takes several days to run at its default setting.
 
 What follows is a short description of what each program does. These programs are
 nested, and under each program or function, I list in bullet points the other 
